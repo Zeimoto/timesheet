@@ -1,0 +1,29 @@
+blocks:
+  - name: Step1
+    step:
+      integration: javascript
+      javascript:
+        body: |
+          const options = {
+            month: "short",
+            day: "numeric",
+            year: "numeric",
+          };
+          const curr = new Date();
+
+          //Get the first day of the week
+          const first = curr.getDate() - curr.getDay() + 1;
+
+          let days = Array.from({ length: 7 }, (_, i) =>
+            new Date(curr.setDate(first + i)).toLocaleDateString("en-US", options),
+          );
+          console.log(days);
+          return days;
+metadata:
+  id: 1059d93a-45b8-4157-ba21-83bce79823a2
+  name: GetWeekDays
+  organization: 426c2044-87d3-4a24-8134-cb547602c793
+trigger:
+  application:
+    id: dde3c1a9-57e8-4a41-b8e8-de4a866a4ae0
+    pageId: ffc68f9e-beaf-47bd-8a2c-3ff945bcc0ce

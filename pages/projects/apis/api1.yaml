@@ -1,0 +1,43 @@
+blocks:
+  - conditional:
+      else:
+        blocks: []
+      elseIf: []
+      if:
+        blocks: []
+        condition: "{{2 > 1}}"
+    name: Condition1
+  - name: Variables1
+    variables:
+      items:
+        - key: myVar
+          mode: MODE_READWRITE
+          type: TYPE_SIMPLE
+          value: '{{"my variable value"}}'
+  - name: TryCatch1
+    tryCatch:
+      catch:
+        blocks: []
+      try:
+        blocks: []
+      variables:
+        error: error
+  - name: Step1
+    step:
+      integration: a570ee3b-ee99-4b10-b8f1-55d1b4a3ea57
+      postgres:
+        body: |-
+          -- You can use SQL to query data (ex. SELECT * FROM orders;)
+          select * from project
+          where id
+        operation: run_sql
+        usePreparedSql: true
+metadata:
+  id: 9521f528-ab41-4453-bdc9-de122b629ca2
+  name: API1
+  organization: 426c2044-87d3-4a24-8134-cb547602c793
+trigger:
+  application:
+    id: dde3c1a9-57e8-4a41-b8e8-de4a866a4ae0
+    options: {}
+    pageId: 96ca4797-4e1c-4c26-9e82-ac668342c909

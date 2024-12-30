@@ -1,0 +1,32 @@
+blocks:
+  - name: Step2
+    step:
+      integration: javascript
+      javascript:
+        body: |
+          const weekdays = ["mon", "tue", "wed", "thu", "fri", "sat", "sun"];
+
+          const timesheets = GetTimesheets.response;
+
+          timesheets.map((timesheet) => {
+            weekdays.map((weekday) => {
+              console.log(timesheet[weekday]);
+            });
+          });
+  - name: Step1
+    step:
+      integration: a570ee3b-ee99-4b10-b8f1-55d1b4a3ea57
+      postgres:
+        body: |-
+          -- You can use SQL to query data (ex. SELECT * FROM orders;)
+          select * from timesheet
+        operation: run_sql
+        usePreparedSql: true
+metadata:
+  id: 9302d17b-0eac-4574-b0df-f2ca1c10fe4b
+  name: API1
+  organization: 426c2044-87d3-4a24-8134-cb547602c793
+trigger:
+  application:
+    id: dde3c1a9-57e8-4a41-b8e8-de4a866a4ae0
+    pageId: ffc68f9e-beaf-47bd-8a2c-3ff945bcc0ce

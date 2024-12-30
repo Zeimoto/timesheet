@@ -1,0 +1,80 @@
+{
+  "apis": {},
+  "configType": "APPLICATION",
+  "id": "dde3c1a9-57e8-4a41-b8e8-de4a866a4ae0",
+  "pages": {
+    "20e91fb8-f7af-44ed-8c70-e501bac431b3": {
+      "apis": {
+        "0dec3179-d582-41c6-a3d9-4a4921e7a1cc": "GetEmployeeProject",
+        "1a0d5b36-6b87-4bd1-985b-8c6bc9aab083": "GetProjects",
+        "309665d4-1698-4839-a046-c83e364808f6": "SaveChagesEmployeeProject",
+        "4318c695-2845-4364-bafc-cc2a6a0120ca": "GetEmployees",
+        "f8af7098-45b0-4b46-a8c1-d08883d9112f": "API1"
+      },
+      "id": "20e91fb8-f7af-44ed-8c70-e501bac431b3",
+      "name": "EmployeeProject"
+    },
+    "4f77c010-e1b1-404c-a592-2f3252267a92": {
+      "apis": {
+        "106c6a80-67a1-4457-a57d-47850852a8a3": "GetWeekDays",
+        "1ed9fe06-2d2e-4cf4-9371-efffe71fa4b6": "GetProjects",
+        "2708d0a6-ef1e-495f-8a68-722fb7dd5d7e": "GetTimesheets",
+        "546ea82b-3cad-4f5b-adfa-963a155e9810": "API1",
+        "5944cdb1-4e01-44e7-b22a-54369ef74c47": "GetUser",
+        "6d0b7a08-06ce-444c-856c-82f737e17ac4": "CalculateProjectAllocations",
+        "7d6b9a8a-e1a5-4a9f-9c1a-3f779ac4e70e": "GetEmployees",
+        "b64079e4-a553-44fb-89d7-b016101b0e9e": "GetTimesheetsByProject",
+        "c268a3cd-aab8-4ec7-9dc8-9cda4fdaecf8": "API2",
+        "f1b74452-33be-46bb-9185-2549bf174703": "GetProjectsByAllocationCount"
+      },
+      "id": "4f77c010-e1b1-404c-a592-2f3252267a92",
+      "name": "Home"
+    },
+    "6460399c-7139-40f8-89a0-5473a5af766a": {
+      "apis": {
+        "1b8aad44-6f92-4493-8a21-1e99dff9e592": "SaveChanges",
+        "4058c6f9-3a86-4be2-bd88-75981f970fb1": "GetProjects",
+        "7692883d-a102-4ffa-a801-dad49055e553": "AddProject",
+        "ccabd244-f002-4bf4-9fd8-85435e6d3be7": "GetTimesheet",
+        "d064747b-d2b0-4341-a97b-4e0a61e8d3d1": "API2",
+        "e589c5c4-eb21-4be5-8c5b-eee7d529f20c": "API1",
+        "e72efe86-d0a7-4fb0-a296-d990abe3383d": "API3"
+      },
+      "id": "6460399c-7139-40f8-89a0-5473a5af766a",
+      "name": "NewTimesheet"
+    },
+    "8c423b60-83f1-4b63-9c1f-08a52c02e488": {
+      "apis": {
+        "17c0ef4f-839f-45a4-a14c-3c0bf99f135c": "API1",
+        "52cbe12a-a302-4144-8021-f022edf50b49": "GetWeekDays",
+        "6a1bd641-ddbe-4ae2-b434-6b3b25adbc2d": "GetTimesheetData",
+        "8b4f4615-34c8-4678-83f7-0f2f26c5e2b0": "API2",
+        "d7b49789-aae2-460b-97e3-f4b5608cbc1c": "GetEmployees"
+      },
+      "id": "8c423b60-83f1-4b63-9c1f-08a52c02e488",
+      "name": "Employees"
+    },
+    "96ca4797-4e1c-4c26-9e82-ac668342c909": {
+      "apis": {
+        "1131e00a-b35d-407c-a263-9244bebbedc3": "GetProjects",
+        "1b9b109b-c648-4d91-9107-d71094f94811": "API2",
+        "9521f528-ab41-4453-bdc9-de122b629ca2": "API1"
+      },
+      "id": "96ca4797-4e1c-4c26-9e82-ac668342c909",
+      "name": "Projects"
+    },
+    "ffc68f9e-beaf-47bd-8a2c-3ff945bcc0ce": {
+      "apis": {
+        "1059d93a-45b8-4157-ba21-83bce79823a2": "GetWeekDays",
+        "1626938d-8b9d-439c-bf28-f82b2e4e9e38": "CRUDTimesheet",
+        "287c09c8-3909-471b-9e90-156142d262f4": "GetTimesheets",
+        "6de000c9-dbc4-485a-84e1-05eab90618f2": "RedirectNonAdmin",
+        "7af64146-a0c7-4709-8840-0307a5929c23": "GetTimesheetData",
+        "9302d17b-0eac-4574-b0df-f2ca1c10fe4b": "API1",
+        "e1919546-899f-48a7-afb6-f3f1542d1eca": "GetOnGoingProjects"
+      },
+      "id": "ffc68f9e-beaf-47bd-8a2c-3ff945bcc0ce",
+      "name": "Timesheets"
+    }
+  }
+}

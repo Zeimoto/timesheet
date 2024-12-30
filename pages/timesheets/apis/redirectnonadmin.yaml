@@ -1,0 +1,11 @@
+blocks:
+metadata:
+  id: 6de000c9-dbc4-485a-84e1-05eab90618f2
+  name: RedirectNonAdmin
+  organization: 426c2044-87d3-4a24-8134-cb547602c793
+trigger:
+  application:
+    id: dde3c1a9-57e8-4a41-b8e8-de4a866a4ae0
+    options:
+      executeOnPageLoad: true
+    pageId: ffc68f9e-beaf-47bd-8a2c-3ff945bcc0ce

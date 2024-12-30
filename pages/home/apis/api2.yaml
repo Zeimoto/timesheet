@@ -1,0 +1,18 @@
+blocks:
+  - name: Step1
+    step:
+      integration: a570ee3b-ee99-4b10-b8f1-55d1b4a3ea57
+      postgres:
+        body: |-
+          -- You can use SQL to query data (ex. SELECT * FROM orders;)
+          select * from timesheet
+        operation: run_sql
+        usePreparedSql: true
+metadata:
+  id: c268a3cd-aab8-4ec7-9dc8-9cda4fdaecf8
+  name: API2
+  organization: 426c2044-87d3-4a24-8134-cb547602c793
+trigger:
+  application:
+    id: dde3c1a9-57e8-4a41-b8e8-de4a866a4ae0
+    pageId: 4f77c010-e1b1-404c-a592-2f3252267a92

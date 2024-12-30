@@ -1,0 +1,295 @@
+configuration:
+  dsl:
+    events:
+      eventMap: {}
+    stateVars:
+      stateVarMap: {}
+    timers:
+      timerMap: {}
+    version: 8
+  routes:
+    3f1d21de-1c5c-41c9-b0d8-745219e70291:
+      id: 3f1d21de-1c5c-41c9-b0d8-745219e70291
+      pageId: 8c423b60-83f1-4b63-9c1f-08a52c02e488
+      path: /employees
+      testParams: {}
+    7400bfce-e529-46aa-bb29-45507a909f4c:
+      id: 7400bfce-e529-46aa-bb29-45507a909f4c
+      pageId: ffc68f9e-beaf-47bd-8a2c-3ff945bcc0ce
+      path: /timesheets
+      testParams: {}
+    9e9b1603-7467-4549-bc41-c1d6a422eda7:
+      id: 9e9b1603-7467-4549-bc41-c1d6a422eda7
+      pageId: 6460399c-7139-40f8-89a0-5473a5af766a
+      path: /new-timesheet
+      testParams: {}
+    ahjjxoy521:
+      id: ahjjxoy521
+      pageId: 4f77c010-e1b1-404c-a592-2f3252267a92
+      path: /
+    d7f10495-fc58-4c5f-818b-2ad952898b6d:
+      id: d7f10495-fc58-4c5f-818b-2ad952898b6d
+      pageId: 20e91fb8-f7af-44ed-8c70-e501bac431b3
+      path: /employee-project
+      testParams: {}
+    ef1a47ce-2a57-436d-bd9f-9eccca22ef7a:
+      id: ef1a47ce-2a57-436d-bd9f-9eccca22ef7a
+      pageId: 96ca4797-4e1c-4c26-9e82-ac668342c909
+      path: /projects
+      testParams: {}
+id: dde3c1a9-57e8-4a41-b8e8-de4a866a4ae0
+name: Timesheet
+organizationId: 426c2044-87d3-4a24-8134-cb547602c793
+settings:
+  bundledFiles:
+    - dist/TimesheetList.js
+    - dist/TimesheetList.js.map
+    - dist/ToDoList.js
+    - dist/ToDoList.js.map
+    - dist/assets/component-22478b92.css
+    - dist/assets/component-f6e433de.css
+    - dist/assets/jsx-runtime-85144ca8.js
+    - dist/assets/jsx-runtime-85144ca8.js.map
+    - dist/assets/useSuperblocksContext-98736228.js
+    - dist/assets/useSuperblocksContext-98736228.js.map
+    - dist/injectedReactShim.js
+    - dist/injectedReactShim.js.map
+  cliVersion: 1.9.0
+  componentBaseUrl: https://components-cdn.superblocks.com/7ea59aca-a02a-4cef-a0e1-36e8ae25451b/
+  componentsLastUploaded: 2024-12-20T11:26:46.334Z
+  registeredComponents:
+    02003d24-2fa1-423a-b945-47f8292c5751:
+      componentPath: components/TimesheetList/component.tsx
+      displayName: Timesheet List
+      events:
+        - label: OnChangeTimesheet
+          path: onChangeTimesheet
+      gridDimensions:
+        initialColumns: 50
+        initialRows: 30
+      id: 02003d24-2fa1-423a-b945-47f8292c5751
+      name: TimesheetList
+      properties:
+        - dataType: any
+          isExternallyReadable: true
+          isExternallySettable: true
+          path: currentTimesheets
+          propertiesPanelDisplay:
+            controlType: js-expr
+            label: Timesheets
+        - dataType: any
+          isExternallyReadable: true
+          isExternallySettable: true
+          path: projectsList
+          propertiesPanelDisplay:
+            controlType: js-expr
+            label: Projects
+        - dataType: any
+          isExternallyReadable: true
+          isExternallySettable: true
+          path: currentWeek
+          propertiesPanelDisplay:
+            controlType: js-expr
+            label: WeekDays
+    c93753e2-2d61-4675-ba2c-95bdb86523a1:
+      componentPath: components/ToDoList/component.tsx
+      displayName: To-Do List (Example)
+      events:
+        - label: On Task Added
+          path: onTaskAdded
+        - label: On Task Status Changed
+          path: onTaskStatusChanged
+      gridDimensions:
+        initialColumns: 50
+        initialRows: 30
+      id: c93753e2-2d61-4675-ba2c-95bdb86523a1
+      name: ToDoList
+      properties:
+        - dataType: any
+          isExternallyReadable: true
+          isExternallySettable: true
+          path: tasks
+          propertiesPanelDisplay:
+            controlType: js-expr
+            label: Default Tasks
+            placeholder: "{ taskId: { taskName: 'Task Name', taskStatus: 'complete' | 'todo'
+              } }"
+  sourceFiles:
+    - .eslintrc.js
+    - .gitignore
+    - components/TimesheetList/component.tsx
+    - components/TimesheetList/config.ts
+    - components/TimesheetList/main.scss
+    - components/TimesheetList/types.ts
+    - components/ToDoList/component.tsx
+    - components/ToDoList/config.ts
+    - components/ToDoList/main.scss
+    - components/ToDoList/types.ts
+    - components/ToDoList/validation.tsx
+    - package-lock.json
+    - package.json
+    - tsconfig.json
+  theme:
+    borderRadius:
+      mode: px
+      value: 4
+    mode: AUTO
+    padding:
+      bottom:
+        mode: px
+        value: 12
+      left:
+        mode: px
+        value: 12
+      right:
+        mode: px
+        value: 12
+      top:
+        mode: px
+        value: 12
+    palette:
+      dark:
+        appBackgroundColor: "#131516"
+        primaryColor: "#27BBFF"
+      light:
+        appBackgroundColor: "#F9FAFB"
+        primaryColor: "#27BBFF"
+    primaryColor: "#27BBFF"
+    typeFace: Roboto
+    typographies:
+      body1:
+        fontFamily: inherit
+        fontSize: 16px
+        fontWeight: 400
+        letterSpacing: 0em
+        lineHeight: 1.5
+        textColor:
+          default: colors.neutral700
+      body2:
+        fontFamily: inherit
+        fontSize: 14px
+        fontWeight: 400
+        letterSpacing: normal
+        lineHeight: 1.5
+        textColor:
+          default: colors.neutral700
+      body3:
+        fontFamily: inherit
+        fontSize: 12px
+        fontWeight: 400
+        letterSpacing: normal
+        lineHeight: 1.5
+        textColor:
+          default: colors.neutral700
+      buttonLabel:
+        fontFamily: inherit
+        fontSize: 14px
+        fontWeight: 500
+        letterSpacing: normal
+        lineHeight: 1.1
+        textColor:
+          default: primary500
+      code:
+        fontFamily: Roboto Mono
+        fontSize: 13px
+        fontWeight: 400
+        letterSpacing: normal
+        lineHeight: 1.2
+        textColor:
+          default: colors.neutral700
+      heading1:
+        fontFamily: inherit
+        fontSize: 36px
+        fontWeight: 500
+        letterSpacing: -0.01em
+        lineHeight: 1.2
+        textColor:
+          default: colors.neutral900
+      heading2:
+        fontFamily: inherit
+        fontSize: 28px
+        fontWeight: 500
+        letterSpacing: -0.01em
+        lineHeight: 1.2
+        textColor:
+          default: colors.neutral900
+      heading3:
+        fontFamily: inherit
+        fontSize: 24px
+        fontWeight: 500
+        letterSpacing: -0.01em
+        lineHeight: 1.2
+        textColor:
+          default: colors.neutral900
+      heading4:
+        fontFamily: inherit
+        fontSize: 20px
+        fontWeight: 500
+        letterSpacing: -0.01em
+        lineHeight: 1.2
+        textColor:
+          default: colors.neutral900
+      heading5:
+        fontFamily: inherit
+        fontSize: 16px
+        fontWeight: 500
+        letterSpacing: 0em
+        lineHeight: 1.2
+        textColor:
+          default: colors.neutral900
+      heading6:
+        fontFamily: inherit
+        fontSize: 14px
+        fontWeight: 500
+        letterSpacing: normal
+        lineHeight: 1.2
+        textColor:
+          default: colors.neutral900
+      inputLabel:
+        fontFamily: inherit
+        fontSize: 14px
+        fontWeight: 500
+        letterSpacing: normal
+        lineHeight: 1.5
+        textColor:
+          default: colors.neutral700
+          disabled: colors.neutral300
+          error: colors.danger
+      inputPlaceholder:
+        fontFamily: inherit
+        fontSize: inherit
+        fontStyle: inherit
+        fontWeight: 400
+        letterSpacing: inherit
+        lineHeight: inherit
+        textColor:
+          default: colors.neutral300
+        textDecoration: inherit
+        textTransform: inherit
+      inputText:
+        fontFamily: inherit
+        fontSize: 14px
+        fontWeight: 400
+        letterSpacing: normal
+        lineHeight: 1.2
+        textColor:
+          default: colors.neutral700
+      label:
+        fontFamily: inherit
+        fontSize: 14px
+        fontWeight: 500
+        letterSpacing: normal
+        lineHeight: 1.5
+        textColor:
+          default: colors.neutral700
+      link:
+        fontFamily: inherit
+        fontSize: inherit
+        fontWeight: 400
+        letterSpacing: inherit
+        lineHeight: inherit
+        textColor:
+          default: colors.primary500
+        textDecoration: none
+        textTransform: inherit
+    version: 5
