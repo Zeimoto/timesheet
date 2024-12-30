@@ -1,0 +1,23 @@
+blocks:
+  - name: Step1
+    step:
+      integration: a570ee3b-ee99-4b10-b8f1-55d1b4a3ea57
+      postgres:
+        body: |-
+          select p.name, count(ep.project_id) as allocations from project p
+          left join employee_project ep on p.id = ep.project_id
+          left join employee e on ep.employee_id = e.id
+          where p."project_status" = 'On Going'
+          group by p.name
+          order by count(ep.project_id) desc
+          limit 10
+        operation: run_sql
+        usePreparedSql: true
+metadata:
+  id: f1b74452-33be-46bb-9185-2549bf174703
+  name: GetProjectsByAllocationCount
+  organization: 426c2044-87d3-4a24-8134-cb547602c793
+trigger:
+  application:
+    id: dde3c1a9-57e8-4a41-b8e8-de4a866a4ae0
+    pageId: 4f77c010-e1b1-404c-a592-2f3252267a92

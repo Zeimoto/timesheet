@@ -1,0 +1,43 @@
+blocks:
+  - name: Projects_and_Employees
+    step:
+      integration: a570ee3b-ee99-4b10-b8f1-55d1b4a3ea57
+      postgres:
+        body: |-
+          /* Gets everything from project and employee */
+          select p.id as project_id, e.id as employee_id, p.*, e.*
+          from project p
+          left join employee_project ep on p.id = ep.project_id
+          left join employee e on ep.employee_id = e.id
+          order by project_id
+        operation: run_sql
+        usePreparedSql: true
+  - name: Step2
+    step:
+      integration: python
+      python:
+        body: |
+          # Use Python to:
+          #
+          # 1. Transform the output of previous Steps by referencing their output (ex. Step1.output)
+          # 2. Write logic referencing UI components (ex. Table1.selectedRow.id)
+          # 3. Make http calls using requests (import requests)
+          #
+          # More libraries are coming in the future. Superblocks uses Python 3.
+          def project_employees(projects):
+              return [(project["name"], len(project["project_id"])) for project in projects]
+
+
+          result = project_employees(Projects_and_Employees.output)
+
+          print(Projects_and_Employees.output)
+
+          return result
+metadata:
+  id: 1ed9fe06-2d2e-4cf4-9371-efffe71fa4b6
+  name: GetProjects
+  organization: 426c2044-87d3-4a24-8134-cb547602c793
+trigger:
+  application:
+    id: dde3c1a9-57e8-4a41-b8e8-de4a866a4ae0
+    pageId: 4f77c010-e1b1-404c-a592-2f3252267a92

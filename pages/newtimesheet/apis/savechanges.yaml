@@ -1,0 +1,22 @@
+blocks:
+  - name: TimesheetChanges
+    step:
+      integration: a570ee3b-ee99-4b10-b8f1-55d1b4a3ea57
+      postgres:
+        deletedRows: "{{Table1.editedRows.deletedRows}}"
+        insertedRows: "{{Table1.editedRows.insertedRows}}"
+        newValues: "{{Table1.editedRows.updatedRows}}"
+        operation: update_rows
+        schema: public
+        table: timesheet
+        useAdvancedMatching: auto
+metadata:
+  id: 1b8aad44-6f92-4493-8a21-1e99dff9e592
+  name: SaveChanges
+  organization: 426c2044-87d3-4a24-8134-cb547602c793
+trigger:
+  application:
+    id: dde3c1a9-57e8-4a41-b8e8-de4a866a4ae0
+    options:
+      executeOnPageLoad: false
+    pageId: 6460399c-7139-40f8-89a0-5473a5af766a

@@ -1,0 +1,24 @@
+blocks:
+  - name: GetData
+    step:
+      integration: a570ee3b-ee99-4b10-b8f1-55d1b4a3ea57
+      postgres:
+        body: |-
+          SELECT 
+              CONCAT(employee.first_name, ' ', employee.last_name) AS full_name,
+              project.name,
+          		employee_project.start_date,
+          		employee_project.finish_date
+          FROM employee_project
+          INNER JOIN employee ON employee_project.employee_id = employee.id
+          INNER JOIN project ON employee_project.project_id = project.id;
+        operation: run_sql
+        usePreparedSql: true
+metadata:
+  id: 0dec3179-d582-41c6-a3d9-4a4921e7a1cc
+  name: GetEmployeeProject
+  organization: 426c2044-87d3-4a24-8134-cb547602c793
+trigger:
+  application:
+    id: dde3c1a9-57e8-4a41-b8e8-de4a866a4ae0
+    pageId: 20e91fb8-f7af-44ed-8c70-e501bac431b3

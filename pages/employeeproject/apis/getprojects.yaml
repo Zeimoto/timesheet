@@ -1,0 +1,18 @@
+blocks:
+  - name: GetProjectsForEmployees
+    step:
+      integration: a570ee3b-ee99-4b10-b8f1-55d1b4a3ea57
+      postgres:
+        body: |-
+          SELECT project.name, project.id
+          FROM project
+        operation: run_sql
+        usePreparedSql: true
+metadata:
+  id: 1a0d5b36-6b87-4bd1-985b-8c6bc9aab083
+  name: GetProjects
+  organization: 426c2044-87d3-4a24-8134-cb547602c793
+trigger:
+  application:
+    id: dde3c1a9-57e8-4a41-b8e8-de4a866a4ae0
+    pageId: 20e91fb8-f7af-44ed-8c70-e501bac431b3
