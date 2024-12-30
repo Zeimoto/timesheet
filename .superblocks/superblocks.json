@@ -68,7 +68,6 @@
         "1059d93a-45b8-4157-ba21-83bce79823a2": "GetWeekDays",
         "1626938d-8b9d-439c-bf28-f82b2e4e9e38": "CRUDTimesheet",
         "287c09c8-3909-471b-9e90-156142d262f4": "GetTimesheets",
-        "6de000c9-dbc4-485a-84e1-05eab90618f2": "RedirectNonAdmin",
         "7af64146-a0c7-4709-8840-0307a5929c23": "GetTimesheetData",
         "9302d17b-0eac-4574-b0df-f2ca1c10fe4b": "API1",
         "e1919546-899f-48a7-afb6-f3f1542d1eca": "GetOnGoingProjects"
